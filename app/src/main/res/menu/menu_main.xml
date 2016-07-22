@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.yusuf.connecttohost.MainActivity">
+
+    <!--
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    -->
+
+    <item
+        android:id="@+id/action_connect"
+        android:icon="@drawable/connect_item_three"
+        android:title="@string/action_connect"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/action_guide"
+        android:icon="@drawable/guide_item_two"
+        android:title="@string/action_guide"
+        android:orderInCategory="3"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        android:orderInCategory="10"
+        app:showAsAction="ifRoom" />
+
+</menu>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ConnectToHost</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_connect">Connect</string>
+    <string name="action_guide">Guide</string>
+    <string name="action_refresh">Refresh</string>
+</resources>
