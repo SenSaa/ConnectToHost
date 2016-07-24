@@ -4,4 +4,5 @@
     <string name="action_connect">Connect</string>
     <string name="action_guide">Guide</string>
     <string name="action_refresh">Refresh</string>
+    <string name="action_close">Close Connection</string>
 </resources>

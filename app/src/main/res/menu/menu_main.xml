@@ -30,6 +30,12 @@
         android:id="@+id/action_refresh"
         android:title="@string/action_refresh"
         android:orderInCategory="10"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_close"
+        android:title="@string/action_close"
+        android:orderInCategory="10"
+        app:showAsAction="never" />
 
 </menu>

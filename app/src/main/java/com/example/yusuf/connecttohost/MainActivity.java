@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
     PrintWriter outputStream;
     BufferedReader inputStream;
-    BufferedReader userInput;
-    Scanner scannerInput;
     Scanner inputStream2;
 
     Button receiveFromServerBtn;
@@ -50,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText ipAddressField;
     EditText portField;
+
+    boolean connectionIsClosed;
 
 
     @Override
@@ -89,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
                 clientEditTx.setText("");
             }
         });
+
+        connectionIsClosed = false;
 
     }
 
@@ -140,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         }
+
         // Refresh Menu item.
         else if (id == R.id.action_refresh) {
             // Finish and recreate Activity.
@@ -148,7 +150,45 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
+        // Close connection.
+        else if (id == R.id.action_close) {
+            try {
+                close();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        try {
+            close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void close() throws IOException {
+        if (!connectionIsClosed) {
+            if (clientSocket != null) {
+                clientSocket.close();
+            }
+            if (outputStream != null) {
+                outputStream.close();
+            }
+            if (inputStream != null) {
+                inputStream.close();
+            }
+            connectionIsClosed = true;
+        }
     }
 
 
