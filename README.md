@@ -8,7 +8,7 @@ For the server element, run "HostConnection" java application on IDE/editor.
 
 
 # How does it work?
-1) On your computer, using an IDE/editor - run the server application [HostConnection] (https://github.com/SenSaa/HostConnection).
+1) On your computer, using an IDE/editor - run the server application [HostConnectionGUI] (https://github.com/SenSaa/HostConnectionGUI) or [HostConnection] (https://github.com/SenSaa/HostConnection).
 
 2) On your Android device - Start this client application.
 
