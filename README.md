@@ -4,11 +4,11 @@ Multi-threaded Client application that exchanges messages with Server using TCP/
 For the server element, run "HostConnection" java application on IDE/editor.
 
 
-![App Screenshot] (http://i.imgur.com/JGzfyTa.png?1 "ConnectToHost")
+![App Screenshot](http://i.imgur.com/JGzfyTa.png?1 "ConnectToHost")
 
 
 # How does it work?
-1) On your computer, using an IDE/editor - run the server application [HostConnectionGUI] (https://github.com/SenSaa/HostConnectionGUI) or [HostConnection] (https://github.com/SenSaa/HostConnection).
+1) On your computer, using an IDE/editor - run the server application [HostConnectionGUI](https://github.com/SenSaa/HostConnectionGUI) or [HostConnection](https://github.com/SenSaa/HostConnection).
 
 2) On your Android device - Start this client application.
 
